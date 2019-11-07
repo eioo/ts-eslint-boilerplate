@@ -4,6 +4,9 @@
   "main": "src/app.ts",
   "license": "MIT",
   "scripts": {
+    "lint:scripts": "eslint \"**/*.{ts,tsx}\" --ignore-pattern .gitignore --color --quiet",
+    "lint:types": "tsc",
+    "lint": "npm run lint:types && npm run lint:scripts",
     "dev": "ts-node-dev --transpileOnly --respawn src/app.ts",
     "start": "ts-node-dev src/app.ts"
   },
